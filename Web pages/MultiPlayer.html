@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Multi Player</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Content/body.css"/>
+    <link rel="stylesheet" href="Content/button.css">
+    <style>
+    h1
+    {
+       color: white;
+    }
+    h3
+    {
+        color: white;
+    }
+    th
+    {
+        color: white;
+    }
+    
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <br />
+
+        <div class="row">
+            <div class="col-md-12">
+                <img src="Images/Logo.jpg" alt="Logo" height="100" width="100">
+                <br><h1>Online Players</h1><h3>-Select three players to start the game</h3>
+                <div class="row">
+
+
+                    <br />
+                    <div class="col-lg-6 col-md-6">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Player Name</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbl_PlayerInvite" style="font-weight: bold; color: rgb(56, 125, 216)"></tbody>
+                        </table>
+                    </div>
+                    <div class ="col-lg-4 col-md-4">
+                        <table class="table table-hover" id="tbl_PlayerInvited">
+                            <thead>
+                            <tr>
+                                <th>Player Name</th>
+                            </tr>
+                            </thead>
+                            <tbody style="font-weight: bold; color: rgb(56, 125, 216)"></tbody>
+                        </table>
+                        <button  id="btnStartGame" value="Start Game"  style="width:100%">Start Game</button>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script id="tblbody_PlayerInvite" type="text/html">
+    <tr>
+        <td class="playername">{{Playe_Name}}</td>
+        <td>
+            <button type="button" class="btn btn-success btn-sm" onclick="InvitePlayerFunc('{{Playe_Name}}')">Invite</button>
+        </td>
+    </tr>
+</script>
+<script src="Scripts/jquery-3.3.1.js"></script>
+<script src="Scripts/bootstrap.js"></script>
+<script src="JavaScripts/PageScripts/MultiPlayer.js"></script>

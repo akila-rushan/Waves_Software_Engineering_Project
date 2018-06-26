@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Content/bootstrap.min.css">
+    <link rel="stylesheet" href="Content/common.css">
+
+    <style>
+        .container {
+            position: relative;
+        }
+
+        th {
+            color: white;
+        }
+
+        h2 {
+            color: white;
+        }
+
+        h3 {
+            color: white;
+        }
+
+        .header2 {
+            position: absolute;
+            margin-right: 60px;
+            left: 500px;
+            top: 13px;
+        }
+
+        .header3 {
+            position: absolute;
+            margin-right: 60px;
+            left: 700px;
+            top: 13px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            padding-top: 14px;
+        }
+
+        th {
+            padding: 8px 18px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            padding-top: 12px;
+            margin-bottom: 8px;
+            align-content: center;
+        }
+
+        li {
+            background-color: rgb(170, 170, 145);
+        }
+
+
+
+        .header4 {
+            position: absolute;
+            margin-right: 60px;
+            left: 530px;
+            top: 90px;
+        }
+
+        .font-white {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="width: 95%; padding-left: 0; padding-right: 0">
+        <table style="width:100%">
+            <tr height="50px">
+                <th><h1><b>Start the Game</b></h1></th>
+                <th></th>
+                <th><h2 class="header2">Turn Clock</h2></th>
+                <th><h2 class="header3">Game Amount</h2></th>
+                <th><button value="Analyzer" style="width:100%" onclick="window.open('Analyzer.html')">Analyzer</button></th>
+            </tr>
+            <td></td>
+            <td></td>
+            <td><h3 class="header4">2.00</h3></td>
+            <td><h3 class="header5">RS.5000</h3></td>
+
+        </table>
+
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#tec"><b>Technology</b></a></li>
+                    <li><a data-toggle="tab" href="#fina"><b>Finance</b></a></li>
+                    <li><a data-toggle="tab" href="#Manuf"><b>Manufacturer Services</b></a></li>
+                    <li><a data-toggle="tab" href="#Health"><b>Health Service</b></a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="tec" class="tab-pane fade in active">
+                        <h2>Buy</h2>
+                        <table class="table table-light" style="width: 100%">
+                            <thead>
+                                <tr height="50px">
+                                    <th>Company</th>
+                                    <th>Round 01</th>
+                                    <th>Round 02</th>
+                                    <th>Round 03</th>
+                                    <th>Round 04</th>
+                                    <th>Round 05</th>
+                                    <th>Round 06</th>
+                                    <th>Round 07</th>
+                                    <th>Round 08</th>
+                                    <th>Round 09</th>
+                                    <th>Round 10</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbl_tec_Buy" style="font-weight: bold; color: rgb(56, 125, 216)"></tbody>
+                        </table>
+                        <h2>Sell</h2>
+                        <table class="table table-light" style="width: 100%">
+                            <thead>
+                                <tr height="50px">
+                                    <th>Company</th>
+                                    <th>Round 01</th>
+                                    <th>Round 02</th>
+                                    <th>Round 03</th>
+                                    <th>Round 04</th>
+                                    <th>Round 05</th>
+                                    <th>Round 06</th>
+                                    <th>Round 07</th>
+                                    <th>Round 08</th>
+                                    <th>Round 09</th>
+                                    <th>Round 10</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbl_tec_Sell" style="font-weight: bold; color: rgb(56, 125, 216)"></tbody>
+                        </table>
+                    </div>
+
+
+                    <div id="fina" class="tab-pane fade">
+
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+
+                                <h2>Buy</h2>
+                                <table class="table table-light" style="width: 100%">
+                                    <thead>
+                                        <tr height="50px">
+                                            <th>Company</th>
+                                            <th>Round 01</th>
+                                            <th>Round 02</th>
+                                            <th>Round 03</th>
+                                            <th>Round 04</th>
+                                            <th>Round 05</th>
+                                            <th>Round 06</th>
+                                            <th>Round 07</th>
+                                            <th>Round 08</th>
+                                            <th>Round 09</th>
+                                            <th>Round 10</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbl_fina_Buy" style="font-weight: bold; color: rgb(56, 125, 216)"></tbody>
+                                </table>
+                                <h2>Sell</h2>
+                                <table class="table table-light" style="width: 100%">
+                                    <thead>
+                                        <tr height="50px">
+                                            <th>Company</th>
+                                            <th>Round 01</th>
+                                            <th>Round 02</th>
+                                            <th>Round 03</th>
+                                            <th>Round 04</th>
+                                            <th>Round 05</th>
+                                            <th>Round 06</th>
+                                            <th>Round 07</th>
+                                            <th>Round 08</th>
+                                            <th>Round 09</th>
+                                            <th>Round 10</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbl_fina_Sell" style="font-weight: bold; color: rgb(56, 125, 216)"></tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="Manuf" class="tab-pane fade">
+
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+
+                                <h2>Buy</h2>
+                                <table class="table table-light" style="width: 100%">
+                                    <thead>
+                                        <tr height="50px">
+                                            <th>Company</th>
+                                            <th>Round 01</th>
+                                            <th>Round 02</th>
+                                            <th>Round 03</th>
+                                            <th>Round 04</th>
+                                            <th>Round 05</th>
+                                            <th>Round 06</th>
+                                            <th>Round 07</th>
+                                            <th>Round 08</th>
+                                            <th>Round 09</th>
+                                            <th>Round 10</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbl_Manuf_Buy" style="font-weight: bold; color: rgb(56, 125, 216)"></tbody>
+                                </table>
+                                <h2>Sell</h2>
+                                <table class="table table-light" style="width: 100%">
+                                    <thead>
+                                        <tr height="50px">
+                                            <th>Company</th>
+                                            <th>Round 01</th>
+                                            <th>Round 02</th>
+                                            <th>Round 03</th>
+                                            <th>Round 04</th>
+                                            <th>Round 05</th>
+                                            <th>Round 06</th>
+                                            <th>Round 07</th>
+                                            <th>Round 08</th>
+                                            <th>Round 09</th>
+                                            <th>Round 10</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbl_Manuf_Sell" style="font-weight: bold; color: rgb(56, 125, 216)"></tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div id="Health" class="tab-pane fade">
+
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12">
+
+                                <h2>Buy</h2>
+                                <table class="table table-light" style="width: 100%">
+                                    <thead>
+                                        <tr height="50px">
+                                            <th>Company</th>
+                                            <th>Round 01</th>
+                                            <th>Round 02</th>
+                                            <th>Round 03</th>
+                                            <th>Round 04</th>
+                                            <th>Round 05</th>
+                                            <th>Round 06</th>
+                                            <th>Round 07</th>
+                                            <th>Round 08</th>
+                                            <th>Round 09</th>
+                                            <th>Round 10</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbl_Health_Buy" style="font-weight: bold; color: rgb(56, 125, 216)"></tbody>
+                                </table>
+                                <h2>Sell</h2>
+                                <table class="table table-light" style="width: 100%">
+                                    <thead>
+                                        <tr height="50px">
+                                            <th>Company</th>
+                                            <th>Round 01</th>
+                                            <th>Round 02</th>
+                                            <th>Round 03</th>
+                                            <th>Round 04</th>
+                                            <th>Round 05</th>
+                                            <th>Round 06</th>
+                                            <th>Round 07</th>
+                                            <th>Round 08</th>
+                                            <th>Round 09</th>
+                                            <th>Round 10</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbl_Health_Sell" style="font-weight: bold; color: rgb(56, 125, 216)"></tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        <br/><br/>
+            <h3>Buy Shairs</h3>
+            <div class="col-md-4">
+                <label id="lblCompany" class="font-white"></label>
+                <br/>
+                <label id="lblTurn" class="font-white"></label>
+               <br/><br/>
+                <div class="form-group">
+                    <label class="font-white">Units</label>
+                    <input type="text" class="form-control" id="txtbuyunit" placeholder="Enter units" name="unit">
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <button type="submit" style="width: 90%">Confirm</button>
+                    </div>
+                    <div class="col-lg-6">
+                        <button type="Submit" style="width: 90%">Go Back</button>
+                    </div>
+                </div>
+                
+                <br/><br/>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <script id="tblbody_tec_Buy" type="text/html">
+        <tr>
+            <td>{{Company}}</td>
+            <td>{{Round01}}</td>
+            <td>{{Round02}}</td>
+            <td>{{Round03}}</td>
+            <td>{{Round04}}</td>
+            <td>{{Round05}}</td>
+            <td>{{Round06}}</td>
+            <td>{{Round07}}</td>
+            <td>{{Round08}}</td>
+            <td>{{Round09}}</td>
+            <td>{{Round10}}</td>
+            <td>
+                <button type="button" class="btn btn-success btn-sm" onclick="func_Buy('{{Company}}','{{companyId}}','{{roundId}}','{{tempTurnId}}','{{userName}}')">Buy</button>
+            </td>
+        </tr>
+    </script>
+
+    <script id="tblbody_fina_Buy" type="text/html">
+        <tr>
+            <td>{{Company}}</td>
+            <td>{{Round01}}</td>
+            <td>{{Round02}}</td>
+            <td>{{Round03}}</td>
+            <td>{{Round04}}</td>
+            <td>{{Round05}}</td>
+            <td>{{Round06}}</td>
+            <td>{{Round07}}</td>
+            <td>{{Round08}}</td>
+            <td>{{Round09}}</td>
+            <td>{{Round10}}</td>
+            <td>
+                <button type="button" class="btn btn-success btn-sm" onclick="func_Buy('{{Company}}','{{companyId}}','{{roundId}}','{{tempTurnId}}','{{userName}}')">Buy</button>
+            </td>
+        </tr>
+    </script>
+
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="JavaScripts/PageScripts/GameScreen.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Stock Trading Simulator</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <!--<link href="Content/bootstrap.css" rel="stylesheet" />-->
+    <link rel="stylesheet" href="Content/body.css"/>
+    <link rel="stylesheet" href="Content/button.css">
+
+    <link href="Content/Homepage.css" rel="stylesheet" />
+
+    <style>
+       
+        .FontColor {
+            
+            font-size: 15px;
+        }
+       
+        #txtUserName
+        {
+            background-color:white;
+        }
+        h1
+        {
+            color: white;
+        }
+        h2
+        {
+            color: white;
+        }
+        label
+        {
+            color: white;
+        }
+
+       
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        &nbsp
+        <div class="row">
+            <div class="col-md-2">
+                <img src="Images/Logo.jpg" alt="Logo" height="150" width="150" style="border-radius: 18px">
+            </div>
+            <br />
+            <div class="col-md-5">
+                <h1 class="">Stock Trading Simulator</h1>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                &nbsp
+                <h2>Login</h2>
+                <div class="row">
+                    <div class="col-md-10">
+                        <label>User Name</label>
+                        <input type="text" id="txtUserName" class="form-control" placeholder="User Name" aria-describedby="basic-addon1" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-10">
+                        <label>Password</label>
+                        <input type="password" id="txtPassword" class="form-control" placeholder="Password" aria-describedby="basic-addon1" />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-3">
+                        <button  id="btnLogin"  value="Login"  style="width: 90%">Login</button>
+                    </div>
+                    <!--<form action="PlayerProfile.html">
+                        <input type="submit" id="btnLogin" value="Login" class="btn btn-success" style="width:90%" />
+                    </form>-->
+                    <div class="col-md-3">
+                        <button id="btnCancel" value="Clear"   style="width: 90%">Clear</button>
+                    </div>
+                </div>
+            </div>
+            <!-- SingUp -->
+            &nbsp
+            <div class="col-md-6">
+                <h2>Register</h2>
+                <div class="row">
+                    <div class="col-md-10">
+                        <label>User Name</label>
+                        <input type="text" id="txtUserNameregister" class="form-control" placeholder="User Name" aria-describedby="basic-addon1" />
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-10">
+
+                        <label>Password</label>
+                        <input type="password" id="txtPasswordregister" class="form-control" placeholder="Password" aria-describedby="basic-addon1" />
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-10">
+
+                        <label>Confirm Password</label>
+                        <input type="password" id="txtConfirmPassword" class="form-control" placeholder="Confirm Password" aria-describedby="basic-addon1" />
+
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-3">
+                        <button type="button" id="btnRegister" value="Register"  style="width: 90%">Register</button>
+                    </div>
+                    <div class="col-md-3">
+                        <button  id="btnClear" value="Clear"  style="width: 90%" onclick="ClearTextboxesOne()">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="JavaScripts/ClearTextboxes.js"></script>
+    <script src="JavaScripts/ClearTextboxesOne.js"></script>
+    <script src="JavaScripts/PageScripts/Login.js"></script>
+</body>
+</html>
