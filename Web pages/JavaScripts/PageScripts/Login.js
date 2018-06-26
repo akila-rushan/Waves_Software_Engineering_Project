@@ -22,7 +22,7 @@ function loginfunction() {
 
 
     $.ajax({
-        url: "http://192.168.8.200:8080/api/login",
+        url: "http://localhost:8080/api/login",
         type: "POST",
         dataType: "json",
         //crossDomain: true,
@@ -64,7 +64,7 @@ function Registerfunction() {
             }
 
             $.ajax({
-                url: "http://192.168.8.200:8080/api/register",
+                url: "http://localhost:8080/api/register",
                 type: "POST",
                 dataType: "json",
                 //crossDomain: true,

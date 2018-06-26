@@ -5,16 +5,19 @@
 
 function loadUi() {
 
+    $("#btnBuy").click(setbuyshare);
 
-
-    var i = 1; var refreshIntervalId = setInterval(logCount, 10000);
+    var i = 1; var refreshIntervalId = setInterval(logCount, 20000);
     loadtecBuy(i);
     function logCount() {
 
         i++;
         console.log(i);
         loadtecBuy(i);
-        if (i == 10) clearInterval(refreshIntervalId);
+        if (i == 10) {
+            clearInterval(refreshIntervalId);
+            callwinner();
+        }
     };
 
 
@@ -34,7 +37,7 @@ function loadtecBuy(i) {
     console.log(startround);
 
     $.ajax({
-        url: "http://192.168.8.200:8080/api/run",
+        url: "http://localhost:8080/api/run",
         type: "POST",
         dataType: "json",
         data: startround,
@@ -62,6 +65,7 @@ function ServerloadtecBuy(data) {
         tmp2 = tmp2.split("{{tempTurnId}}").join(value.tempTurnId);
         tmp2 = tmp2.split("{{roundId}}").join(value.roundId);
         tmp2 = tmp2.split("{{userName}}").join(value.userName);
+        tmp2 = tmp2.split("{{companyId}}").join(value.companyId);
         tmp2 = tmp2.split("{{Round01}}").join(value.sharePriceTurn1);
         tmp2 = tmp2.split("{{Round02}}").join(value.sharePriceTurn2);
         tmp2 = tmp2.split("{{Round03}}").join(value.sharePriceTurn3);
@@ -94,7 +98,7 @@ function loadFinaBuy(i) {
     console.log(startround);
 
     $.ajax({
-        url: "http://192.168.8.200:8080/api/run",
+        url: "http://localhost:8080/api/run",
         type: "POST",
         dataType: "json",
         data: startround,
@@ -138,20 +142,35 @@ function ServerloadFinaBuy(data) {
 };
 
 
+var tempturn, username, roundid, companyid;
+
 function func_Buy(Company, companyId, roundId, tempTurnId, userName) {
     $("#lblCompany").html("Company: " + Company);
     $("#lblTurn").html("Round: " + tempTurnId);
 
+   
+    tempturn = tempTurnId,
+    username = userName,
+    roundid = roundId,
+    companyid = companyId;
+    
+}
+
+
+function setbuyshare() {
+
     var byushair = {
-        tempturn: tempTurnId,
-        username: userName,
-        roundid: roundId,
-        companyid: companyId,
+        tempturn: tempturn,
+        username: username,
+        roundid: roundid,
+        companyid: companyid,
         units: $("#txtbuyunit").val()
     }
 
+    console.log(byushair);
+
     $.ajax({
-        url: "http://192.168.8.200:8080/api/buy-share",
+        url: "http://localhost:8080/api/buy-share",
         type: "POST",
         dataType: "json",
         data: byushair,
@@ -163,4 +182,10 @@ function func_Buy(Company, companyId, roundId, tempTurnId, userName) {
             console.log(errorThrown);
         }
     });
+}
+
+
+
+function callwinner() {
+    alert("Win");
 }
