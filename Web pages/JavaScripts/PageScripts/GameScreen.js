@@ -7,7 +7,7 @@ function loadUi() {
 
     $("#btnBuy").click(setbuyshare);
 
-    var i = 1; var refreshIntervalId = setInterval(logCount, 20000);
+    var i = 1; var refreshIntervalId = setInterval(logCount, 120000);
     loadtecBuy(i);
     function logCount() {
 
