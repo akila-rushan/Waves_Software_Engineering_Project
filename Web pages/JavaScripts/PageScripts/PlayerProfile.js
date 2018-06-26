@@ -15,7 +15,7 @@ function getBankAmount(User) {
     };
 
     $.ajax({
-        url: "http://192.168.8.200:8080/api/user-bank",
+        url: "http://localhost:8080/api/user-bank",
         type: "POST",
         dataType: "json",
         //crossDomain: true,
@@ -43,7 +43,7 @@ function BankDetails(data) {
     };
 
     $.ajax({
-        url: "http://192.168.8.200:8080/api/rounds-wining-users",
+        url: "http://localhost:8080/api/rounds-wining-users",
         type: "POST",
         dataType: "json",
         //crossDomain: true,

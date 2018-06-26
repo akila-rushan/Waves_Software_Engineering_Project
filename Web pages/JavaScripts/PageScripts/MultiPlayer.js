@@ -19,7 +19,7 @@ var user = {
 function loadPlayerslist() {
     
     $.ajax({
-        url: "http://192.168.8.200:8080/api/online_players",
+        url: "http://localhost:8080/api/online_players",
         type: "POST",
         dataType: "json",
         //crossDomain: true,
@@ -97,7 +97,7 @@ function startGame() {
 function serverStartgame(TableData) {
     if (TableData.username2 != null && TableData.username3 != null && TableData.username4 != null) {
         $.ajax({
-            url: "http://192.168.8.200:8080/api/newRound",
+            url: "http://localhost:8080/api/newRound",
             type: "POST",
             dataType: "json",
             data: TableData,
