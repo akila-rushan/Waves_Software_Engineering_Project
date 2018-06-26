@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+        Player Profile
+    </title>
+    <link  rel="stylesheet"  href="Content/bootstrap.min.css"/>
+    <link rel="stylesheet" href="Content/body.css"/>
+    
+    <style>
+        
+
+button
+{
+    border: 1px solid;
+   background-color: rgb(83, 83, 126);
+   color: white;
+   padding: 10px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 14px;
+   margin: 4px 1px;					
+   cursor: pointer;
+   border-radius: 5px; 
+   padding-bottom: 5px;
+   padding-left: 20px;
+   padding-right: 10px;
+   
+
+}
+    
+            h3 {
+                    height: 90px;
+                    width: 90px;
+                }
+                .NewsFeed
+                {
+                    color: rgb(225, 225, 236);
+                }
+                a
+                {
+                    font-size: 20px;
+                    color: rgb(225, 225, 236);
+                }
+                th
+                {
+                    color: white;
+                    font-weight: normal;
+                }
+                label
+                {
+                    color: white;
+                    background-color: rgb(39, 25, 71);
+                   
+                }
+            
+                #btnAccDetails
+                {
+                    background-color:rgb(83, 83, 126);
+                    color: white;
+                    text-orientation: center;
+                    border-radius: 5px;
+                    padding-top: 7px;
+                    text-align: center;
+                    
+                }
+                #btnBank
+                {
+                    background-color:rgb(83, 83, 126);
+                    color: white;
+                    text-orientation: center;
+                    border-radius: 5px;
+                    padding-top: 7px;
+                    text-align: center;
+                }
+                input
+                {   
+                    text-align: center;
+                    background-color: rgb(189, 176, 176);
+                    padding-right: 30px;
+                  
+                    
+                }
+                input::placeholder
+                {
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 20px;
+                }
+               
+               
+        </style>
+</head>
+
+<body>
+    <br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="container-fluid">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <img src="Images/Logo.jpg" alt="Logo" height="100" width="100">
+                    </li>
+                    <li class="nav-item">
+                        <br><br>
+                        <a class="nav-link " href="#tabNewGame" onclick="window.open('MultiPlayer.html')" data-toggle="tab">New Game</a>
+                    </li>
+                    <li class="nav-item">
+                        <br><br>
+                        <a class="nav-link" href="#tabHistory" data-toggle="tab" onclick="window.open('History.html')">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <br><br>
+                        <a class="nav-link" href="#tabStocks" data-toggle="tab" onclick="window.open('Stock.html')">Stocks</a>
+                    </li>
+                    <li class="nav-item">
+                        <br><br>
+                        <a class="nav-link" href="#tabStocks" data-toggle="tab" onclick="window.open('Bank.html')">Bank</a>
+                    </li>
+                </ul>
+                <br>
+                <label id="btnAccDetails" value="News Feed" style="width:100%">News Feed</label>
+                <!--<input type="button" id="btnAccDetails" value="News Feed" class="btn btn-success" style="width:100%" />-->
+                <br><br>
+                <div class="col-lg-12 col-md-12">
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th>Game Round</th>
+                            <th>Winner</th>
+                          </tr>
+                        </thead>
+                        <tbody id="tbl_GameRound" style="font-weight: bold; color: rgb(56, 125, 216)"></tbody>
+                      </table>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+            <div class="row">
+                <div class="col-md-12">
+                    <br><br>
+                    <label id="btnAccDetails" value="Player Name" style="width:90%">Player Name</label>
+                    <!--<input type="button" id="btnAccDetails" value="Player Name" class="btn btn-success" style="width:90%" />-->
+                    <h3>
+                        <input type="text" id="txtPlayer" placeholder="Player Name" value="Player Name" readonly="readonly" />
+
+                    </h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <label id="btnBank" value="Bank" style="width:90%">Bank</label>
+                    <!--<input type="button" id="btnBank" value="Bank" class="btn btn-success" style="width:90%" />-->
+                    <h3>
+                        <input type="text" id="txtBankAmount" placeholder="Bank Amount"  readonly="readonly" />
+
+                    </h3>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="btnInvitation" value="Invitation"  style="width:90%" >Invitation</button>
+                
+                    <h3>
+                        <input type="text" id="txtPlayer" placeholder="Any Invitation"  />
+
+                    </h3>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <script id="jstblGameRound" type="text/html">
+        <tr>
+            <td>{{GameRound}}</td>
+            <td>{{Winner}}</td>
+        </tr>
+    </script>
+</div>
+    
+    <script src="Scripts/jquery-3.3.1.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="JavaScripts/PageScripts/PlayerProfile.js"></script>
+</body>
+</html>
